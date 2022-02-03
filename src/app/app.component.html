@@ -1,0 +1,92 @@
+<form [formGroup]= "userServiceFrom" >
+  <div style="padding: 30%;">
+    <h2>Parametor de Busqueda</h2>
+    <button type="button" class="btn btn-primary">Consultar</button>
+    <button type="button" class="btn btn-primary">Limpiar</button>
+    <div class="formgroup">
+      <label> Nombre</label>
+      <input type="text" formControlName="Nombre" class="form-control" />
+    </div>
+  </div>
+  <div style="padding: 30%;">
+    <h2>Lista de Usuarios</h2>
+    <button type="button" class="btn btn-primary">Crear</button>
+    <div class="Lista de Usuarios">
+      <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>ID_Rol</th>
+          <th>Activo</th>
+        </tr>
+      </thead>
+      <tbody>
+          <th></th>
+          <td></td>
+          <td></td>
+          <td></td>
+      </tbody>
+    </table>
+  </div>
+  <div style="padding: 10%;">
+  <h2>Informacion del usuario</h2>
+      <div class="Botones">
+        <button type="button" class="btn btn-primary" (click)="guardar()">Guardar</button>
+        <button type="button" class="btn btn-primary">Modificar</button>
+        <button type="button" class="btn btn-primary">Eliminar</button>
+      </div>
+      <div class="formgroup">
+        <label> id</label>
+        <input type="number" formControlName="id"  class="form-control" />
+      </div>
+      <div class="formgroup">
+        <label> Nombre</label>
+        <input type="text" formControlName="Nombre"  class="form-control">
+      </div>
+      <div class="formgroup">
+        <label> id_rol</label>
+        <select class="id_rol" aria-label=".form-select-sm example">
+          <option selected>seleccione el rol</option>
+          <option value="1">Administrador</option>
+          <option value="2">Auxiliar</option>
+          <option value="3">Auditor</option>
+        </select>
+      </div>
+      <div class="formgroup">
+        <label> Activo</label>
+        <html lang="en">
+          <body>
+            <div class="container mt-3">
+              <form action="/action_page.php">
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio1"
+                    name="optradio"
+                    value="option1"
+                    checked
+                  />
+                  <label class="form-check-label" for="radio1">Si</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    type="radio"
+                    class="form-check-input"
+                    id="radio2"
+                    name="optradio"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="radio2">No</label>
+                </div>
+              </form>
+            </div>
+          </body>
+        </html>
+      </div>
+    </div>
+  </div>
+</form>
+
+<router-outlet></router-outlet>
